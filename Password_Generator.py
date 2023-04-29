@@ -15,10 +15,26 @@ def password_generator(password_length, use_lowercase, use_uppercase, use_digits
     password = "".join(random.choices(characters, k=password_length))
     return password
 # Example usage
-password_length = 16
-use_lowercase = True
-use_uppercase = True
-use_digits = True
-use_symbols = True
+password_length = int(input("Specify the lenght of the password :- "))
+lowercase = str(input("Do you want to use lowercase? (T/F):- ").upper())
+if lowercase == "T":
+    use_lowercase = True
+else:
+    use_lowercase = False    
+uppercase = str(input("Do you want to use uppercase? (T/F):- ").upper())
+if uppercase == "T":    
+    use_uppercase = True
+else:
+    use_uppercase = False   
+digits = str(input("Do you want to use Digits? (T/F):- ").upper())
+if digits == "T":
+    use_digits = True
+else:
+    use_digits = False   
+symbols = str(input("Do you want to use Symbols? (T/F):- ").upper())
+if symbols == "T":
+    use_symbols = True
+else:
+    use_symbols = False   
 password = password_generator(password_length, use_lowercase, use_uppercase, use_digits, use_symbols)
 print("Your password is:", password)
