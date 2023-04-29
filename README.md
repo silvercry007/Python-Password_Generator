@@ -1,2 +1,2 @@
 # Python-Password_Generator
-Password Generator using Python.
+Python-based password generator that generates passwords of a specific length
